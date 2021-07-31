@@ -8,13 +8,12 @@
 </head>
 <body>
     <h1>Leads Name</h1>
-    <ul>
+    <div>
         {% for lead in leads %}
-        <a href="leads/{{ lead.pk }}/">
-            <li>{{ lead }}</li>
+        <a href="{{ lead.pk }}/">
+            {{ lead }}
         </a>
         {% endfor %}
-    </ul>
-
+        </div>
 </body>
 </html>
