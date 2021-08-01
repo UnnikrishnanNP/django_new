@@ -7,13 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Leads Name</h1>
-    <div>
-        {% for lead in leads %}
-        <a href="{{ lead.pk }}/">
-            {{ lead }}
-        </a>
-        {% endfor %}
-        </div>
+    <h1>Create Leads</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
